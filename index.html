@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col justify-between">
+
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between">
+            <h1 class="text-xl font-semibold">BMI Calculator</h1>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:text-blue-200">Home</a></li>
+                <li><a href="about.html" class="hover:text-blue-200">About</a></li>
+                <li><a href="contact.html" class="hover:text-blue-200">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto my-10">
+        <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-6 text-center text-gray-700">BMI Calculator</h2>
+            
+            <label for="weight" class="block text-gray-600 mb-2">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter your weight" required
+                   class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+            <label for="height" class="block text-gray-600 mb-2">Height (m):</label>
+            <input type="number" id="height" placeholder="Enter your height" required
+                   class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+            <button onclick="calculateBMI()" 
+                    class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition duration-200">
+                Calculate BMI
+            </button>
+
+            <h3 id="result" class="text-center mt-6 text-lg font-semibold text-gray-700"></h3>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 BMI Calculator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="bmi-calculator.js"></script>
+</body>
+</html>
