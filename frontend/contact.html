@@ -4,39 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
+<body class="bg-cover bg-center bg-fixed flex flex-col min-h-screen" style="background-image: url('contactbackground.jpg');">
+    <nav class="bg-gray-800 text-white p-4">
+        <ul class="flex space-x-4">
+            <li><a href="main_page.html">Home</a></li>
             <li><a href="bmi.html">BMI</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
     </nav>
-    <h1>Contact Us</h1>
-    <p>If you like the way the site was created, you can find me on GitHub under the nickname Kamilq99. All rights to the site are not reserved. This is a typical open source project that I also intend to create as part of learning some DevOps practices and this can also be found in this repository.</p>
+    
+    <div class="flex-grow container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-800 bg-opacity-60 p-8 rounded-lg shadow-lg">
+            <h1 class="text-4xl sm:text-5xl font-bold text-white">Contact With Me :D! </h1>
+            <p class="text-base sm:text-lg text-gray-200 mt-4">If you like the way the site was created, you can find me on GitHub under the nickname Kamilq99. All rights to the site are not reserved. This is a typical open source project that I also intend to create as part of learning some DevOps practices and this can also be found in this repository.</p>
+            <a href="https://github.com/Kamilq99" class="text-lg text-blue-400 mt-4 inline-block">GitHub</a>
+        </div>
+    </div>
 
-    <a href="https://github.com/Kamilq99">GitHub</a>
-
-    <footer>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="bmi.html">BMI</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-
-        <ul>
-            <li><a href="">GitHub</a></li>
-        </ul>
-
-        <ul>
-            <li><a href="">X</a></li>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">Facebook</a></li>
-        </ul>
-        <p>&copy; 2024 BMI Calculator. Full Open Source.</p>
+    <footer class="bg-gray-800 text-white p-4 mt-10">
+        <div class="flex justify-between flex-wrap">
+            <ul class="flex space-x-4">
+                <li><a href="main_page.html">Home</a></li>
+                <li><a href="bmi.html">BMI</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <ul class="flex space-x-4 mt-2 md:mt-0">
+                <li><a href="https://github.com/Kamilq99"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+            </ul>
+        </div>
+        <p class="text-center mt-4">&copy; 2024 BMI Calculator. Full Open Source.</p>
     </footer>
 </body>
 </html>
