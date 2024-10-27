@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
+        }
+    </style>
+</head>
+<body class="bg-cover bg-center bg-fixed" style="background-image: url('aboutbackground.png');">
+    <nav class="bg-gray-800 text-white p-4">
+        <ul class="flex space-x-4">
+            <li><a href="main_page.html">Home</a></li>
+            <li><a href="bmi.html">BMI</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="content container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-800 bg-opacity-60 p-8 rounded-lg shadow-lg">
+            <h1 class="text-4xl sm:text-5xl font-bold text-white">About me & my project</h1>
+            <p class="text-base sm:text-lg text-gray-200 mt-4">As I wrote, the project is a platform for learning DevOps practices. I work as a Linux and Windows Server Administrator on a daily basis and I am fascinated by working in a DevOps position. I have long been intrigued by topics such as Docker, Kubernetes, the Golang language and Cloud Technologies such as Azure or AWS. The project is an introduction to something bigger for me. And something bigger on my GitHub? Well, soon :)</p>
+
+            <p class="text-base sm:text-lg text-gray-200 mt-4">The project itself contains two components. Frontend and Backend. The frontend will be simple and will contain things like Tailwind Framework for decoration and fetch in JavaScript, and the rest as standard in HTML.</p>
+
+            <p class="text-base sm:text-lg text-gray-200 mt-4">Later I plan to create Backend in Go Language (Golang) and do containerization, then move on to creating containers and possibly deploying the application to Kind (Kubernetes in Docker).</p>
+            
+            <p class="text-base sm:text-lg text-gray-200 mt-4">Alternatively, the service can be made without containerization and orchestration on the server itself, where something like Nginx will appear for serving static files and Nginx as Reverse Proxy.</p>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white p-4 mt-10">
+        <div class="flex justify-between flex-wrap">
+            <ul class="flex space-x-4">
+                <li><a href="main_page.html">Home</a></li>
+                <li><a href="bmi.html">BMI</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <ul class="flex space-x-4 mt-2 md:mt-0">
+                <li><a href="https://github.com/Kamilq99"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+            </ul>
+        </div>
+        <p class="text-center mt-4">&copy; 2024 BMI Calculator. Full Open Source.</p>
+    </footer>
+</body>
+</html>
