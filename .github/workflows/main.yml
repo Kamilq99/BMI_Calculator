@@ -13,19 +13,29 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            # Setup Go
             - name: Set up Go
               uses: actions/setup-go@v2
               with:
                   go-version: 1.23.1
-            
-            - name: install dependencies
-              run: go get github.com/gin-gonic/gin
-              working-directory: calculate
 
-            - name: go mod tidy
-              run: go mod tidy
-              working-directory: calculate
-            
-            - name: run tests
-              run: go test -v ./...
-              working-directory: calculate
+            # Install dependencies
+            - name: Install dependencies
+              run: |
+                cd calculate
+                go get github.com/gin-gonic/gin
+              working-directory: .
+
+            # Run go mod tidy
+            - name: Go mod tidy
+              run: |
+                cd calculate
+                go mod tidy
+              working-directory: .
+
+            # Run tests
+            - name: Run tests
+              run: |
+                cd calculate
+                go test -v ./...
+              working-directory: .
