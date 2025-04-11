@@ -13,7 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Setup Go environment
+      - name: Checkout code
+        uses: actions/checkout@v2 
+
       - name: Set up Go
         uses: actions/setup-go@v2
         with:
@@ -22,18 +24,14 @@ jobs:
       - name: List files in the calculate directory
         run: ls -la ./calculate
         
-
-      # Step 2: Install dependencies
       - name: Install dependencies
-        run: go get github.com/gin-gonic/gin
-        working-directory: ./calculate  # Zapewniamy, że komenda działa w katalogu calculate
+        run: go get -u github.com/gin-gonic/gin
+        working-directory: ./calculate
 
-      # Step 3: Run go mod tidy
       - name: Go mod tidy
         run: go mod tidy
-        working-directory: ./calculate  # Komenda go mod tidy działa w katalogu calculate
+        working-directory: ./calculate
 
-      # Step 4: Run tests
       - name: Run tests
         run: go test -v ./...
-        working-directory: ./calculate  # Uruchomienie testów w katalogu calculate
+        working-directory: ./calculate
