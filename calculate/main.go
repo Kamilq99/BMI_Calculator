@@ -10,6 +10,7 @@ func main() {
 	r := gin.Default()
 
 	r.POST("/data", handlers.DataHandler)
+	r.GET("/calculate", handlers.CalculateBMIHandler)
 
 	r.Run(":8080")
 }
