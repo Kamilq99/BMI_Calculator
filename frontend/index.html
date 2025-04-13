@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <!-- Add Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+        <h1 class="text-3xl font-semibold text-center text-blue-600 mb-4">BMI Calculator</h1>
+        <p class="text-center text-gray-600 mb-6">Welcome to our BMI Calculator, here you can calculate your BMI and check if you are healthy.</p>
+
+        <div class="space-y-4">
+            <div>
+                <input type="text" id="weight" placeholder="Weight (kg)" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <input type="text" id="height" placeholder="Height (m)" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex space-x-4">
+                <button id="calculate" class="w-full p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Calculate</button>
+                <button id="reset" class="w-full p-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">Reset</button>
+            </div>
+        </div>
+
+        <div class="mt-6">
+            <label for="readonly" class="block text-gray-700 mb-2">Result:</label>
+            <input type="text" id="readonly" readonly class="w-full p-3 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" disabled>
+        </div>
+    </div>
+
+</body>
+</html>
