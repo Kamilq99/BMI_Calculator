@@ -5,9 +5,18 @@ services:
       context: ./frontend  
     ports:
       - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - appnet
 
   backend:
     build:
       context: ./calculate
     ports:
       - "8080:8080"
+    networks:
+      - appnet
+
+networks:
+  appnet:
